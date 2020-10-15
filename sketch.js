@@ -1,6 +1,6 @@
 var database, playerCount;
 
-var gameState, game, form, player;
+var gameState=0, game, form, player;
 
 function setup(){
     //unfinished
@@ -8,6 +8,7 @@ function setup(){
     database = firebase.database();
     game = new Game();
     game.getState();
+    game.start();
 }
 
 function draw(){

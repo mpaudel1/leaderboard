@@ -1,5 +1,7 @@
 var database, playerCount;
 
+var car1, car2, car3, car4, cars;
+
 var gameState=0, game, form, player;
 
 var allPlayers;

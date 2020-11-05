@@ -48,9 +48,14 @@ class Game {
                 x += 200;
                 y = displayHeight - allPlayers[p].distance;
                 cars[index - 1].x = x;
-                cars[index - 1].y =y
+                cars[index - 1].y =y;
+                fill("red");
+                textSize(25);
+                text(allPlayers[p].name, cars[index - 1].x - 5, cars[index - 1].y + 60);
                 if (index === player.index) {
-                    cars[index -1].shapeColor = "red";
+                    fill("blue");
+                    textSize(25);
+                    text(allPlayers[p].name, cars[index - 1].x - 5, cars[index - 1].y + 60);
                     camera.position.x = displayWidth/2;
                     camera.position.y = cars[index -1].y; 
                 }
@@ -68,5 +73,9 @@ class Game {
     }
     end() {
         console.log("game ended")
+    }
+    try() {
+        onceagain = new Trybruh;
+        onceagain.display;
     }
 }   

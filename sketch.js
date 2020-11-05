@@ -4,6 +4,8 @@ var car1, car2, car3, car4, cars;
 
 var car1img, car2img, car3img, car4img, trackimg, groundimg; 
 
+var retryimg;
+
 var gameState=0, game, form, player;
 
 var allPlayers;
@@ -37,7 +39,8 @@ function draw(){
     if (gameState === 2) {
         clear();
         game.end();
-    }
+    } 
+    console.log(gameState);
 }
 
 

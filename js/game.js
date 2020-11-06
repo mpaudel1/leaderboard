@@ -37,6 +37,7 @@ class Game {
     play() {
         form.hide();
         Player.getPlayerInfo();
+        player.getCarsAtEnd();
         if (allPlayers !== undefined) {
             background(groundimg);
             image(trackimg, 0, -displayHeight*4, displayWidth, displayHeight*5)
@@ -67,15 +68,16 @@ class Game {
         }
         if (player.distance > 3800) {
             gameState = 2;
+            player.rank += 1;
+            Player.updateCarsAtEnd(player.rank);
         }
         
         drawSprites();
     }
     end() {
-        console.log("game ended")
-    }
-    try() {
-        onceagain = new Trybruh;
-        onceagain.display;
-    }
-}   
+        console.log("game ended");
+        console.log(player.rank);
+        form.endTitle.show();
+        //player.rank
+    }   
+}
